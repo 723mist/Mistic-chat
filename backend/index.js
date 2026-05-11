@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "../frontend")));
+
 const server = https.createServer({
     cert: fs.readFileSync('cert.pem'),
     key: fs.readFileSync('key.pem')
